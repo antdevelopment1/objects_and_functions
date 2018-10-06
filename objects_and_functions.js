@@ -16,3 +16,16 @@ console.log(person[firstNameProperty]);
 // Uses the dot operator to retrieve the first and last name.
 console.log(person.firstname);
 console.log(person.lastname);
+
+
+// Creates a new object and adds three new primitive string properties to the new object
+person.address  = new Object();
+person.address.street = "111 Main St.";
+person.address.city = "New York";
+person.address.state = "NY";
+
+// Uses the dot to access the street, city
+// Uses brackets to access to property of an object
+console.log(person.address.street);
+console.log(person.address.city);
+console.log(person["address"]["state"]);
