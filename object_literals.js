@@ -20,7 +20,7 @@ newestPerson.lastname = "Alecia";
 console.log(newestPerson);
 console.log(newestPerson["firstname"], newestPerson["lastname"]);
 
-// Creates and object on the fly and adds key value pairs 
+// Creates and object on the fly and adds key value pairs containing another object
 var person2 = {
     "firstname": "Tony",
     "lastname": "Alecia",
