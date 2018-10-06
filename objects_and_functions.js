@@ -6,8 +6,13 @@ var person = new Object();
 //  give it that name and this object will get a reference to the address of that location in memory. SO it will know 
 // where firstname is in memory and thats going to be a primitive a string so its called a property. A first name property.
 person["firstname"] = "Tony";
+person["lastname"] = "Alicea";
 
 var firstNameProperty = "firstname";
 
 console.log(person);
 console.log(person[firstNameProperty]);
+
+// Uses the dot operator to retrieve the first and last name.
+console.log(person.firstname);
+console.log(person.lastname);
