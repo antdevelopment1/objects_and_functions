@@ -25,6 +25,35 @@ var c = {
         console.log(this);
         this.name = "Updated c object";
         console.log(this);
+
+
+        var setname = function(newname) {
+            this.name = newname;
+        }
+        setname('Updated again the c object');
+        console.log(this);
     }
 }
 c.log();
+// In the example about for some reason the this keyword inside the setname function points to the global window...which to me is kind of crazy
+// Even though its inside an object thats inside of a function somehow setname still points to the global window
+// To remedy this
+var x = {
+    name: 'The d object',
+    log: function() {
+        console.log(this);
+        var self = this;
+
+        self.name = 'Updated d object';
+        console.log(self);
+        var setname = function(newname) {
+            self.name = newname;
+        }
+        setname('Updated again! The d objects');
+        console.log(self);
+    }
+}
+x.log();
+// This is cool because in the example above we save the environment at the level associated with the log function inside of a variable called self
+// This allows us to rememdy the issue in which this refers to the window environment and allows us to safe and continue to reference the function enviornment
+// Mind blown so cooool.
