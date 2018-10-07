@@ -1,5 +1,6 @@
 var greet = 'Hello!';
 var greet = 'Hola';
+var greet = 'Bonjour';
 
 console.log(greet);
 
@@ -18,3 +19,11 @@ console.log(english.greet)
 english.greetings = {}; // Now we can call on the line below.
 english.greetings.greet = 'Hello!';
 console.log(english);
+
+// We could also instead of using the dot operator create an object on the fly that fakes namespaces
+var french = {
+    greetings: {
+        basic: 'Bonjour'
+    }
+};
+console.log(french.greetings.basic);
