@@ -31,4 +31,31 @@ var person2 = {
     }
 };
 console.log(person2);
-// Testing to see commits
+
+// Passes the object as an arguemnt 
+var Tony = {
+    "firstname": "Tony",
+    "lastname": "Alecia",
+    "adresss": {
+        "street": "111 Main St.",
+        "city": "New York",
+        "state": "NY"
+    }
+};
+function greet(person) {
+    console.log('Hi, ' + person.firstname);
+}
+greet(Tony);
+
+// Passes and creates an object on the fly
+greet(
+    {
+        firstname: "Mary",
+        lastname: "Doe"
+    }
+);
+// Creates a new address for the tony object on the fly
+Tony.address2 = {
+    street: "333 Second St."
+}
+console.log(Tony);
