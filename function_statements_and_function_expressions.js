@@ -23,3 +23,26 @@ anonymousGreet();
 // This greet function statement is hoisted. When the javascript engine sees the word function on a new line by itself...
 // it says, you're creating a function and will put it into memory but when we look at anonymousGreet we see a variable and .../
 // By default it puts all variables to undefined and when we try to invoke it, its trying to invoke an undefined variable
+
+function log(a) {
+    console.log(a);
+}
+
+// Creates an object on the fly and passes it to a function
+log(3);
+log({
+    greeting: 'hi'
+})
+// or
+// Creates a function on the fly and passes it to a function
+log(function() {
+    console.log('hi');
+});
+
+// To run the function that we are passing to logCabin look at the example below:
+function logCabin(a) {
+    a();
+};
+logCabin(function() {
+    console.log('Hi how are you today');
+});
