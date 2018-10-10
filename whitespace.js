@@ -1,3 +1,5 @@
+// hi
+
 var firstname, lastname, language;
 
 var person = {
