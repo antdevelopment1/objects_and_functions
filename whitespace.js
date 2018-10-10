@@ -1,4 +1,4 @@
-// Hellllloooooooooooo ***
+// Hellllloooooooooooo
 
 var firstname, lastname, language;
 
