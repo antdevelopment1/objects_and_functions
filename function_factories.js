@@ -11,6 +11,6 @@ function makeGreeting(language) {
 
 var greetEnglish = makeGreeting('en');
 var greetSpanish = makeGreeting('es');
-
+ 
 greetEnglish('April', 'Copes');
 greetSpanish('Lauren', 'Wilkerson');
