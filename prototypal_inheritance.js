@@ -1,3 +1,6 @@
+// ==========
+// Exercise 1
+// ==========
 var person = {
     firstname: 'Default',
     lastname: 'Default',
@@ -29,3 +32,18 @@ var jane = {
 // on the person object so we end up with Jane Default.
 jane.__proto__ = person;
 console.log(jane.getFullName())
+
+// ==========
+// Exercise 2
+// ==========
+var a = {};
+var b = function() {};
+var c = [];
+
+console.log(a.__proto__);
+console.log(b.__proto__);
+console.log(c.__proto__);
+
+console.log(a.__proto__.__proto__);
+console.log(b.__proto__.__proto__);
+console.log(c.__proto__.__proto__);
