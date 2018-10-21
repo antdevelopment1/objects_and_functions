@@ -57,9 +57,9 @@
 // Do not omit the new keyword before a function constructor. Javascript will still try to execute the Person function causing your new objects to be undefined
 // Once we call a method of a function it will also error because its a function not an object. It will not go up the prototypal chain
 
-// ================
+// ==========
 // Exercise 3
-// ================
+// ==========
 String.prototype.isLengthGreaterThan = function (limit) {
     return this.length > limit;
 }
@@ -76,3 +76,19 @@ Number.prototype.isPositive = function() {
 // However we can do this...
 var a = new Number(3);
 console.log(a.isPositive());
+
+// ==========
+// Exercise 4
+// ==========
+// Dangerous Mental Note
+// By using built in function constructors for creating prmitives you arent really creating primitives and strange things can happen during comparison with operators and coersion.
+// Its better in general to not use the built in constructors. Use literals, use the actual primitive values unless you absolutly have to. Understand any type of comparison has to be the same type.
+var a = 3;
+var b = new Number(3);
+console.log(a == b);
+console.log(a === b);
+
+// We can try to use them for conversion sometimes for example
+var c = Number("3");
+console.log(c);
+// But understand the difference with c we are calling the Number function and the example above we are using the new keyword in front of the function and creating an object
