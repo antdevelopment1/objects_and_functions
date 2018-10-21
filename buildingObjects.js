@@ -1,3 +1,6 @@
+// ===========
+// Exercies 1
+// ===========
 // Function Constructors
 // function Person () {
 //     console.log(this);
@@ -14,6 +17,10 @@
 // console.log(john);
 // console.log(jane);
 
+// ===========
+// Exercies 2
+// ===========
+
 
 // We are simply calling the Person function below but by adding new in front of person we chnage the value of where 'this' and what is returned.
 // We are constructing objects using functions and that is a function constructor. A normal function that is used to construct objects.
@@ -29,8 +36,20 @@ function Person (firstname, lastname) {
     // return {greeting: 'I got in the way.'};
 }
 
+Person.prototype.getFullName = function() {
+    return this.firstname + " " + this.lastname;
+}
 var john = new Person('John', 'Doe');
 var jane = new Person('Jane', 'Doe');
 
-console.log(john);
-console.log(jane);
+console.log(john.getFullName());
+console.log(jane.getFullName());
+
+Person.prototype.getFormalFullName = function() {
+    return this.lastname + " " + this.firstname;
+}
+console.log(john.getFormalFullName());
+console.log(jane.getFormalFullName());
+
+// Any object that we create with the Person function sometime later we can features to all of these objects at once by using the .prototype property
+// of the function constructor. We can give all these all access to a new method at one time
