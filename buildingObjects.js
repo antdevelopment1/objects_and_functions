@@ -53,3 +53,6 @@ console.log(jane.getFormalFullName());
 
 // Any object that we create with the Person function sometime later we can features to all of these objects at once by using the .prototype property
 // of the function constructor. We can give all these all access to a new method at one time
+
+// Do not omit the new keyword before a function constructor. Javascript will still try to execute the Person function causing your new objects to be undefined
+// Once we call a method of a function it will also error because its a function not an object. It will not go up the prototypal chain
