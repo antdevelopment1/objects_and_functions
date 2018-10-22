@@ -60,20 +60,36 @@
 // ==========
 // Exercise 3
 // ==========
-String.prototype.isLengthGreaterThan = function (limit) {
-    return this.length > limit;
-}
-// This works because this string we converted to an object automatically so now every and any string we pass has access to the isLengthGreaterThan method.
-// Very powerful
-console.log("John".isLengthGreaterThan(3));
+// String.prototype.isLengthGreaterThan = function (limit) {
+//     return this.length > limit;
+// }
+// // This works because this string we converted to an object automatically so now every and any string we pass has access to the isLengthGreaterThan method.
+// // Very powerful
+// console.log("John".isLengthGreaterThan(3));
 
-// We can NOT do the same with numbers
-// Though JavaScript is nice enough to convert a string into an object automatically will not convert a number into an object automatically
-Number.prototype.isPositive = function() {
-    return this > 0;
-}
-// console.log(3.isPositive());
-// However we can do this...
-var a = new Number(3);
-console.log(a.isPositive());
+// // We can NOT do the same with numbers
+// // Though JavaScript is nice enough to convert a string into an object automatically will not convert a number into an object automatically
+// Number.prototype.isPositive = function() {
+//     return this > 0;
+// }
+// // console.log(3.isPositive());
+// // However we can do this...
+// var a = new Number(3);
+// console.log(a.isPositive());
+
+// ==========
+// Exercise 4
+// ==========
+// Dangerous Mental Note
+// By using built in function constructors for creating prmitives you arent really creating primitives and strange things can happen during comparison with operators and coersion.
+// Its better in general to not use the built in constructors. Use literals, use the actual primitive values unless you absolutly have to. Understand any type of comparison has to be the same type.
+var a = 3;
+var b = new Number(3);
+console.log(a == b);
+console.log(a === b);
+
+// We can try to use them for conversion sometimes for example
+var c = Number("3");
+console.log(c);
+// But understand the difference with c we are calling the Number function and the example above we are using the new keyword in front of the function and creating an object
 
